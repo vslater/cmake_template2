@@ -12,11 +12,11 @@ link_directories(${PROJECT_SOURCE_DIR}/libs)                # Add all your libra
 # When you add a new library insert it here without the -l flag: for example gtest will be -lgtest
 #target_link_libraries(tests gtest)
 
-include_directories(include /source)  # Insert all sources and includes in the subdirectories,
+include_directories(include )  # Insert all sources and includes in the subdirectories,
                                       # for example look gtest in the named directories
 
 enable_testing()
-add_executable(runUnitTests test.cpp foo.cpp)
+add_executable(runUnitTests test.cpp foo.cpp tests/numbers.t.cpp tests/math.t.cpp)
 target_link_libraries(runUnitTests gtest gtest_main)
 add_test(
     NAME runUnitTests
