@@ -3,5 +3,5 @@
 
 void foo()
 {
-    std::cout << "Hello Worldihufvohufouh!\n";
+    std::cout << "Hello my Worlda!\n";
 }
