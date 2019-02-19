@@ -15,8 +15,12 @@ link_directories(${PROJECT_SOURCE_DIR}/libs)                # Add all your libra
 include_directories(include )  # Insert all sources and includes in the subdirectories,
                                       # for example look gtest in the named directories
 
+file(GLOB tests_sources . tests/*.t.cpp)
+
+#add_executable(foo ${foo_sources})                                 
+
 enable_testing()
-add_executable(runUnitTests test.cpp foo.cpp tests/numbers.t.cpp tests/math.t.cpp)
+add_executable(runUnitTests test.cpp foo.cpp ${tests_sources})
 target_link_libraries(runUnitTests gtest gtest_main)
 add_test(
     NAME runUnitTests
