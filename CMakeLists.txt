@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.4)
 
 set (CMAKE_CXX_STANDARD 11)
 
+set (MY_CMAKE_CONSTANT 123)
+
 project(hello_world)
 
 include_directories(${PROJECT_SOURCE_DIR})
@@ -26,3 +28,8 @@ add_test(
     NAME runUnitTests
     COMMAND runUnitTests
 )
+
+
+# generate the config
+configure_file(${PROJECT_SOURCE_DIR}/src/config.h.in ${PROJECT_SOURCE_DIR}/generated/config.h)
+include_directories(${PROJECT_SOURCE_DIR}/generated)
