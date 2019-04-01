@@ -3,9 +3,9 @@
 git clone https://github.com/vslater/cmake_gtest.git
 cd cmake_gtest
 mkdir build
+cd build
 cmake ..
-cmake build .
-make
+cmake build . or make
 
 ./app
 ./runUnitTests
