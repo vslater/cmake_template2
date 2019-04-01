@@ -33,3 +33,4 @@ add_test(
 # generate the config
 configure_file(${PROJECT_SOURCE_DIR}/src/config.h.in ${PROJECT_SOURCE_DIR}/generated/config.h)
 include_directories(${PROJECT_SOURCE_DIR}/generated)
+
