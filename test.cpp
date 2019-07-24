@@ -7,7 +7,7 @@ TEST(MyTest, Fourteens) {
 }
 
 TEST(MyTest, Thirteens) {
-    EXPECT_EQ(13,13);
+    EXPECT_EQ(11,13);
 }
 
 int main()
